@@ -22,6 +22,7 @@ public class ActivitePratiqueN2Application {
 		return args -> {
 			Patient p1 = Patient.builder()
 					.nom("zineb")
+					.prenom("kourifa M")
 					.dateNaissance(new Date())
 					.score(2)
 					.malade(false)
@@ -30,12 +31,13 @@ public class ActivitePratiqueN2Application {
 
 			Patient p2 = new Patient();
 			p2.setNom("ayoub");
+			p2.setPrenom("massaadi");
 			p2.setDateNaissance(new Date());
 			p2.setScore(3);
 			p2.setMalade(false);
 			patientRepository.save(p2);
 
-			Patient p3 = new Patient(null, "chaimae", new Date(), 4, true);
+			Patient p3 = new Patient(null, "chaimae", "kourifa", new Date(), 4, true);
 			patientRepository.save(p3);
 
 			patientRepository.findAll().forEach(System.out::println );
