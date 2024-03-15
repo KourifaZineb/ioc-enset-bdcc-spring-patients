@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Patients</title>
+</head>
+<body>
+    <h2>List des patients</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Date de naissance</th>
+                <th>Score</th>
+                <th>Malade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="p:${listPatients}">
+                <td th:text="${p.id}"></td>
+                <td th:text="${p.nom}"></td>
+                <td th:text="${p.dateNaissance}"></td>
+                <td th:text="${p.score}"></td>
+                <td th:text="${p.malade}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
